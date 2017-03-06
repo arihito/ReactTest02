@@ -7,7 +7,7 @@ var MathClass = React.createClass({
   mathFunc: function(e) {
     if (e.key === 'Enter')
       this.setState({
-        num: e.target.value
+        num: eval(e.target.value)
     });
   },
   render: function() {
@@ -17,7 +17,9 @@ var MathClass = React.createClass({
           type='test'
           onKeyPress={this.mathFunc}
         />
-        <h2>{eval(this.state.num)}</h2>
+        <h2 style={{color:this.state.num >= 5 ? 'green' : 'red'}}>
+          {this.state.num}
+        </h2>
       </div>
     );
   }
