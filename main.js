@@ -11,9 +11,19 @@ var MathClass = React.createClass({
     });
   },
   render: function() {
+    var defAttrs = {
+      style: {
+        color: "#333",
+        backgroundColor: "#ddd",
+        fontFamily: "Serif",
+        fontSize: 22
+      }
+    }
+
     return (
       <div>
         <input
+          { ...defAttrs }
           type='test'
           onKeyPress={this.mathFunc}
         />
