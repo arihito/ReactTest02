@@ -11,20 +11,19 @@ var MathClass = React.createClass({
     });
   },
   render: function() {
-    return React.DOM.div(
-      null,
-      React.DOM.input({
-        type: 'test',
-        onKeyPress: this.mathFunc
-      }),
-      React.DOM.h2(null,eval(this.state.num))
+    return (
+      <div>
+        <input
+          type='test'
+          onKeyPress='{this.mathFunc}'
+        />
+        <h2>{eval(this.state.num)}</h2>
+      </div>
     );
   }
 });
 
 ReactDOM.render(
-  React.createElement(
-    MathClass
-  ),
+  <MathClass />,
   document.getElementById('content')
 );
