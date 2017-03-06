@@ -15,7 +15,7 @@ var MathClass = React.createClass({
       <div>
         <input
           type='test'
-          onKeyPress='{this.mathFunc}'
+          onKeyPress={this.mathFunc}
         />
         <h2>{eval(this.state.num)}</h2>
       </div>
